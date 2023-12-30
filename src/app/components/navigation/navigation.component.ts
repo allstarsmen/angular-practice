@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class NavigationComponent {
   allRoutes = [
-    { path: '/', title: 'Home' },
+    { path: '/home', title: 'Home' },
     { path: '/categories', title: 'Categories' }
   ];
 }

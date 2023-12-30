@@ -1,25 +1,35 @@
 import { Routes } from "@angular/router";
+import { NotFoundComponent } from "./pages/not-found/not-found.component";
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     title: 'Home',
-    loadChildren: () => import('./pages/home/home.module').then(module => module.HomeModule)
+    loadChildren: () => import('./modules/home.module').then(module => module.HomeModule)
   },
   {
     path: 'categories',
     title: 'Categories',
-    loadChildren: () => import('./pages/categories/categories.module').then(module => module.CategoriesModule)
+    loadChildren: () => import('./modules/categories.module').then(module => module.CategoriesModule)
   },
   {
     path: 'category',
     title: 'New Category',
-    loadChildren: () => import('./pages/category/category.module').then(module => module.CategoryModule)
+    loadChildren: () => import('./modules/category.module').then(module => module.CategoryModule)
   },
   {
     path: 'category/:id',
     title: 'Edit Category',
-    loadChildren: () => import('./pages/category/category.module').then(module => module.CategoryModule)
+    loadChildren: () => import('./modules/category.module').then(module => module.CategoryModule)
+  },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 
