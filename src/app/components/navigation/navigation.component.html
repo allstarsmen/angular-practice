@@ -1,0 +1,7 @@
+<nav>
+  <a *ngFor="let route of allRoutes; last as isLast"
+    [routerLink]="[route.path]">
+    {{route.title}}
+    <span *ngIf="!isLast">|</span>
+  </a>
+</nav>
