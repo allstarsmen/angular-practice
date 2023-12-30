@@ -1,0 +1,13 @@
+<h1>Create a new category</h1>
+<form [formGroup]="category"
+  (submit)="onSubmit()">
+  <div>
+    <label for="name-input">Name</label>
+    <input type="text"
+      id="name-input"
+      class="border-2 border-gray-700"
+      formControlName="name">
+  </div>
+  <button type="submit"
+    class="border-2 border-gray-700">Submit</button>
+</form>

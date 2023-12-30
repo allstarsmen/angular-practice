@@ -1,5 +1,6 @@
 <h1>Categories</h1>
-<button class="p-2 bg-gray-400 mt-3 mb-3">New Category</button>
+<a class="p-2 bg-gray-400 mt-3 mb-3"
+  [routerLink]="['/category']">New Category</a>
 <ul>
   <li *ngFor="let category of categories"
     class="mb-3">
