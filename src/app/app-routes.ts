@@ -1,10 +1,8 @@
 import { Routes } from "@angular/router";
-import { HomeComponent } from "./pages/home/home.component";
-import { CategoriesComponent } from "./pages/categories/categories.component";
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'Home' },
-  { path: 'categories', component: CategoriesComponent, title: 'Categories' }
+  { path: '', title: 'Home', loadChildren: () => import('./pages/home/home.module').then(module => module.HomeModule) },
+  { path: 'categories', title: 'Categories', loadChildren: () => import('./pages/categories/categories.module').then(module => module.CategoriesModule) }
 ];
 
 export default routes;
