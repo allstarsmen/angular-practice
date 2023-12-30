@@ -1,9 +1,10 @@
-<nav class="mb-3">
+<nav class="mb-3 py-5 border-b-2">
   <a *ngFor="let route of allRoutes"
     [routerLink]="[route.path]"
     [routerLinkActive]="['active']"
     class="bg-blue-700 text-white p-3 mr-3 hover:bg-white hover:text-blue-700
-    [&.active]:bg-white [&.active]:text-blue-700 border-2 border-gray-500 rounded">
+      [&.active]:bg-white [&.active]:text-blue-700 border-2 border-gray-500 rounded
+      shadow-md">
     {{route.title}}
   </a>
 </nav>

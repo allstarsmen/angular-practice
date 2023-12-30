@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { SharedModule } from "../shared.module";
+import { SharedModule } from "./shared.module";
 import { CategoriesComponent } from "../pages/categories/categories.component";
 
 const routes: Routes = [{ path: '', component: CategoriesComponent }];

@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CategoryComponent } from "../pages/category/category.component";
-import { SharedModule } from "../shared.module";
+import { SharedModule } from "./shared.module";
 import { RouterModule, Routes } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 
