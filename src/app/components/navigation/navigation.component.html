@@ -1,7 +1,9 @@
-<nav>
-  <a *ngFor="let route of allRoutes; last as isLast"
-    [routerLink]="[route.path]">
+<nav class="mb-3">
+  <a *ngFor="let route of allRoutes"
+    [routerLink]="[route.path]"
+    [routerLinkActive]="['active']"
+    class="bg-blue-700 text-white p-3 mr-3 hover:bg-white hover:text-blue-700
+    [&.active]:bg-white [&.active]:text-blue-700 border-2 border-gray-500 rounded">
     {{route.title}}
-    <span *ngIf="!isLast">|</span>
   </a>
 </nav>
