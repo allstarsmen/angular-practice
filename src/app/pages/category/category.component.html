@@ -1,13 +1,28 @@
-<h1>Create a new category</h1>
+<h1 class="text-3xl font-bold mb-5">Create a new category</h1>
 <form [formGroup]="category"
   (submit)="onSubmit()">
-  <div>
-    <label for="name-input">Name</label>
-    <input type="text"
-      id="name-input"
-      class="border-2 border-gray-700"
-      formControlName="name">
+  <div class="flex flex-col gap-3 mb-6">
+    <div class="flex flex-col gap-1">
+      <label for="name-input">Name <span class="text-red-600">*</span></label>
+      <input type="text"
+        id="name-input"
+        class="border-2 border-gray-700"
+        formControlName="name"
+        required="">
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="parent-select">Parent Category <span class="text-red-600">*</span></label>
+      <select name="parentSelect"
+        id="parent-select"
+        class="p-2 border-2 border-gray-500 rounded">
+        <option value="1">1</option>
+        <option value="1">1</option>
+      </select>
+    </div>
   </div>
   <button type="submit"
-    class="border-2 border-gray-700">Submit</button>
+    class="p-2 border-2 border-gray-500 rounded bg-blue-500 text-white hover:bg-white
+      hover:text-blue-500 float-end">
+    Submit
+  </button>
 </form>

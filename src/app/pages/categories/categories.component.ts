@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Category } from '../../interfaces/category';
+import { CategoryService } from '../../services/category.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-categories',
@@ -7,16 +9,11 @@ import { Category } from '../../interfaces/category';
   styleUrl: './categories.component.css'
 })
 export class CategoriesComponent {
-  categories: Category[] = [
-    {
-      id: '1',
-      name: 'cat1',
-      parentId: '0'
-    },
-    {
-      id: '2',
-      name: 'cat2',
-      parentId: '0'
-    }
-  ];
+  categories$: Observable<Category[]>;
+
+  constructor(
+    private categoryService: CategoryService
+  ) {
+    this.categories$ = this.categoryService.getCategories();
+  }
 }

@@ -7,7 +7,7 @@
   </a>
 </div>
 <ul>
-  <li *ngFor="let category of categories"
+  <li *ngFor="let category of categories$ | async"
     class="mb-3 flex items-center border-b-2 border-gray-500 rounded pb-1">
     <div class="grow">{{category.name}}</div>
     <button class="p-2 border-2 border-gray-500 rounded ml-3 bg-orange-500 text-white

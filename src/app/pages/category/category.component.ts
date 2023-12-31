@@ -21,11 +21,11 @@ export class CategoryComponent {
   }
 
   onSubmit() {
-    const updatedCategory = { ...this.category.value, parentId: '' } as Category;
-    if (this.categoryId) {
-      updatedCategory.id = this.categoryId;
-    }
-    console.log(updatedCategory);
-    return;
+    // const updatedCategory = { ...this.category.value, parentId: '' } as Category;
+    // if (this.categoryId) {
+    //   updatedCategory.id = this.categoryId;
+    // }
+    // console.log(updatedCategory);
+    // return;
   }
 }
