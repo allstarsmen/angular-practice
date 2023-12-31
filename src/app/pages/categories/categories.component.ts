@@ -8,12 +8,19 @@ import { Observable } from 'rxjs';
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.css'
 })
-export class CategoriesComponent {
-  categories$: Observable<Category[]>;
+export class CategoriesComponent implements OnInit {
+  categories$!: Observable<Category[]>;
 
   constructor(
     private categoryService: CategoryService
   ) {
+  }
+
+  ngOnInit(): void {
+    this.getCategories();
+  }
+
+  getCategories() {
     this.categories$ = this.categoryService.getCategories();
   }
 }
